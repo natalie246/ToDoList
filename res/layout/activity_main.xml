@@ -1,0 +1,114 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nataliemaayan.taskmanager.MainActivity"
+    tools:ignore="MergeRootFrame"
+    android:orientation="vertical"
+    android:background="@drawable/background">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="62dp"
+        android:id="@+id/newTaskLine_button"
+        android:weightSum="1">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/etNewTask"
+            android:layout_weight="0.98"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:hint="Task name:"
+            android:enabled="true"
+            android:lines="1"
+            android:clickable="false" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/saveTaskButton"
+            android:onClick="saveTask"
+            android:singleLine="true"
+            android:background="@android:drawable/ic_input_add" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="67dp"
+        android:layout_gravity="center_horizontal"
+        android:baselineAligned="false"
+        android:measureWithLargestChild="false"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:weightSum="1"
+        android:id="@+id/extraOptions"
+        android:visibility="gone"
+        >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ibtAlarm_newTask"
+            android:background="@android:drawable/ic_menu_recent_history"
+            android:onClick="showTimePickerDialog"
+            android:layout_weight="0.14" />
+
+        <TableLayout
+            android:layout_width="53dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.14"></TableLayout>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ibtDate_newTask"
+            android:background="@android:drawable/ic_menu_today"
+            android:onClick="showDatePickerDialog" 
+            android:layout_weight="0.14"/>
+
+        <TableLayout
+            android:layout_width="62dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.14">
+            
+        </TableLayout>
+		
+		<!-- 
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ibtLocation_newTask"
+            android:background="@android:drawable/ic_dialog_map"
+            android:onClick="showLocationDialog" />
+		 -->
+        <TableLayout
+            android:layout_width="61dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.01"></TableLayout>
+		<!--  
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ibtVoice_newTask"
+            android:background="@android:drawable/ic_btn_speak_now"
+            android:onClick="showVoiceDialog" />
+        -->
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:choiceMode="singleChoice"
+        android:clickable="true"
+        android:longClickable="true"
+        android:stackFromBottom="false"
+        android:paddingTop="5pt" />
+
+</LinearLayout>

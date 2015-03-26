@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Task Manager</string>
+    <string name="enter_location">Enter location</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_location">Location</string>
+	<string name="abc_action_mode_done">Location</string>
+</resources>
